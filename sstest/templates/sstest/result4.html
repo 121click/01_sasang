@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://mbit.weniv.co.kr/result/4/ -->
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/result.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reset.css' %}">
+    <script src="{% static '/js/jquery-3.5.1.js' %}"></script>
+    <title>내 몸에 맞는 술 궁합</title>
+</head>
+
+<body>
+    <section id="main_contents" style="display: flex;">
+        <div class="wrapper">
+            <div class="result">
+                <div class="titles">
+                    <h3>금방 취하는 당신은 !</h3>
+                    <h1>“소음인(少陰人)”</h1>
+                </div>
+                <div class="result_img">
+                    <img src='/static/img/네오.png' width='200pix'>
+                </div>
+            </div>
+            <div class="result_explains">
+
+                <div class="result_explains">
+                    <div class="explain">
+                        <ul>
+                            <li>
+                                술이 약해 조금만 마셔도 금방 취한다.
+                            </li>
+
+                            <li>
+                                소화기관이 약하고 수족냉증을 가지고 있다.
+                            </li>
+
+                            <li>
+                                몸이 냉해 한여름에도 이불을 덥거나 찬물에 샤워를 하지 못하는 편
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="explain">
+                        <h3 class="title">당신에게 맞는 술은?</h3>
+                        <h4 class="sub_title"> “소주와 브랜디가 찰떡궁합”</h4>
+                        <ul>
+                            <li>
+                                비위가 약하고 몸이 차갑고 기가 부족하기 쉬운 체질이므로 맥주 등 성질이 찬 술을 좋지 않다.
+                            </li>
+                            <li>
+                                적당한 알코올로 기혈 순환을 활성화해 몸을 따뜻하게 해주는 소주, 식욕을 돕고 향이 좋으며 입 안의 질감이 부드러운 브랜디 등이 어울린다.
+                            </li>
+                            <li>
+                                소음인에게 맞는 약재인 인삼.당귀.계피.사과 등으로 술을 담가 마시는 것도 좋다
+                            </li>
+
+                        </ul>
+                        <div class="explain">
+                            <h3 class="title">추천하는 안주!</h3>
+                            <ul class="language_lists">
+                                <li>
+                                    <div class="img_wrap">
+                                        <img src='/static/img/1_소음안주.jpg' alt='닭고기'>
+                                    </div>
+                                    <h3>닭고기</h3>
+                                </li>
+                                <li>
+                                    <div class="img_wrap">
+                                        <img src='/static/img/2_소음안주.jpg' alt='감자'>
+                                    </div>
+                                    <h3>감자</h3>
+                                </li>
+                                <li>
+                                    <div class="img_wrap">
+                                        <img src='/static/img/3_소음안주.jpg' alt='복숭아'>
+                                    </div>
+                                    <h3>복숭아</h3>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="explain">
+                            <h3 class="title">숙취해소 음식!</h3>
+                            <ul class="language_lists">
+                                <li>
+                                    <div class="img_wrap">
+                                        <img src='/static/img/4_소음숙취.jpg' alt='생강차'>
+                                    </div>
+                                    <h3>생강차</h3>
+                                </li>
+                                <li>
+                                    <div class="img_wrap">
+                                        <img src='/static/img/5_소음숙취.jpg' alt='인삼차'>
+                                    </div>
+                                    <h3>인삼차</h3>
+                                </li>
+                                <li>
+                                    <div class="img_wrap">
+                                        <img src='/static/img/6_소음숙취.jpg' alt='꿀물'>
+                                    </div>
+                                    <h3>꿀물</h3>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="explain">
+                            <h3 class="title">내 주변 추천 술집</h3>
+                                {% include "map.html" %}
+                        </div>
+                        <div>
+                            <a href="/sstest/result"><button>전체 유형 확인하기</button></a>
+                        </div><br>
+                        <div>
+                        <a href="/sstest/main/"><button>홈으로</button></a>
+                        </div>
+        </section>
+    <script type="text/javascript" src="{% static '/js/result.js' %}"></script>
+</body>
+
+</html>

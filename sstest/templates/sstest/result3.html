@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://mbit.weniv.co.kr/result/4/ -->
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/result.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reset.css' %}">
+    <script src="{% static '/js/jquery-3.5.1.js' %}"></script>
+    <title>내 몸에 맞는 술 궁합</title>
+</head>
+
+<body>
+    <section id="main_contents" style="display: flex;">
+        <div class="wrapper">
+            <div class="result">
+                <div class="titles">
+                    <h3>술자리 분위기를 즐기는 당신은 !</h3>
+                    <h1>“소양인(少陽人)”</h1>
+                </div>
+                <div class="result_img">
+                    <img src='/static/img/제이지.png' width='200pix'>
+                </div>
+            </div>
+            <div class="result_explains">
+
+                <div class="result_explains">
+                    <div class="explain">
+                        <ul>
+                            <li>
+                                과음을 하면 몸에서 열이나고 숙취가 오래감
+                            </li>
+
+                            <li>
+                                사교적인 성격으로 거의 매일 술을 마시는 애주가가 많은 편
+                            </li>
+
+                            <li>
+                                음주 전후로 반드시 식사를 하는게 좋으며, 과음 후에는 변비가 생기지 않게 주의해야 함.
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="explain">
+                        <h3 class="title">당신에게 맞는 술은?</h3>
+                        <h4 class="sub_title"> “몸 안의 열을 내려주는 찬 맥주가 딱!”</h4>
+                        <ul>
+                            <li>
+                                열이 많은 체질이므로 몸 안의 열을 내리고 소변을 잘 보게 하는 맥주가 가장 좋다.
+                            </li>
+                            <li>
+                                소양인에게 맞는 한약재인 구기자.복분자.산수유 등으로 술을 담가 마시는 것도 좋다.
+                            </li>
+                            <li>
+                                양주나 고량주를 많이 마시면 몸이 뜨거워져 발진이나 종기가 생길 수 있으니 피하는 게 낫다.
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="explain">
+                        <h3 class="title">추천하는 안주!</h3>
+                        <ul class="language_lists">
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/소양안주1.png' alt='돼지고기'>
+                                </div>
+                                <h3>돼지고기</h3>
+                            </li>
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/2_소양안주.jpg' alt='전복'>
+                                </div>
+                                <h3>전복</h3>
+                            </li>
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/3_소양안주.jpg' alt='여름 과일'>
+                                </div>
+                                <h3>여름 과일</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="explain">
+                        <h3 class="title">숙취해소 음식!</h3>
+                        <ul class="language_lists">
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/4_소양숙취.jpg' alt='복어탕'>
+                                </div>
+                                <h3>복어탕</h3>
+                            </li>
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/5_소양숙취.jpg' alt='오이냉국'>
+                                </div>
+                                <h3>오이냉국</h3>
+                            </li>
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/6_소양숙취.jpg' alt='야채즙'>
+                                </div>
+                                <h3>야채즙</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="explain">
+                        <h3 class="title">내 주변 추천 술집</h3>
+                            {% include "map.html" %}
+                    </div>
+                    <div>
+                        <a href="/sstest/result"><button>전체 유형 확인하기</button></a>
+                    </div><br>
+                    <div>
+                    <a href="/sstest/main/"><button>홈으로</button></a>
+                    </div>
+    </section>
+    <script type="text/javascript" src="{% static '/js/result.js' %}"></script>
+</body>
+
+</html>

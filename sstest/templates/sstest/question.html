@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/form.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reset.css' %}">
+    <script src="{% static '/js/jquery-3.5.1.js' %}"></script>
+    <title>내 몸에 맞는 술 궁합</title>
+</head>
+
+<body>
+    <section id="survey">
+        <div class="wrapper">
+            <form id="form" action="/sstest/result/" method="post">
+                {% csrf_token %}
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">1/13</h3>
+                        <h3 class="question">당신의 얼굴과 가장 가까운 것은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-1" id="choice-1" value="1" required="required" />
+                            <label for="choice-1">1. 이마가 넓고 광대뼈가 나왔다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-1" id="choice-2" value="2" required="required" />
+                            <label for="choice-2">2. 이목구비가 큼직큼직하고 입술이 두텁다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-1" id="choice-3" value="3" required="required" />
+                            <label for="choice-3">3. 얼굴이 약간 긴편이고, 입은 크지 않으며, 턱이 뾰족한 편이다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-1" id="choice-4" value="4" required="required" />
+                            <label for="choice-4">4. 이목구비가 작고 오목조목하며, 계란형이다.</label>
+                        </div>
+
+                    </div>
+
+                    <div class="btn_wrap">
+
+                        <button class="next_btn">다 음</button>
+
+                    </div>
+
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">2/13</h3>
+                        <h3 class="question">당신의 체격과 가장 가까운 모습은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-2" id="choice-5" value="1" required="required" />
+                            <label for="choice-5">1. 목덜미가 굵고 허리부위가 가는 역삼각형이다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-2" id="choice-6" value="2" required="required" />
+                            <label for="choice-6">2. 허리부위가 굵고 전체적으로 골격이 크다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-2" id="choice-7" value="3" required="required" />
+                            <label for="choice-7">3. 어깨와 가슴이 발달했고, 엉덩이와 다리는 빈약하다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-2" id="choice-8" value="4" required="required" />
+                            <label for="choice-8">4. 어깨가 좁고 가슴이 빈약하며, 엉덩이가 큰편이다.</label>
+                        </div>
+
+                    </div>
+
+                    <div class="btn_wrap btn_sort">
+
+                        <button class="prev_btn">이 전</button>
+
+                        <button class="next_btn">다 음</button>
+
+                    </div>
+
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">3/13</h3>
+                        <h3 class="question">피부 상태는?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-3" id="choice-9" value="1" required="required" />
+                            <label for="choice-9">1. 피부가 희고 얇은 편이다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-3" id="choice-10" value="2" required="required" />
+                            <label for="choice-10">2. 피부가 두껍고 땀구멍이 큰 편이다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-3" id="choice-11" value="3" required="required" />
+                            <label for="choice-11">3. 피부가 까무잡잡하거나 붉은 편이다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-3" id="choice-12" value="4" required="required" />
+                            <label for="choice-12">4. 피부가 희고 창백한 편이다.</label>
+                        </div>
+
+                    </div>
+
+                    <div class="btn_wrap btn_sort">
+
+                        <button class="prev_btn">이 전</button>
+
+                        <button class="next_btn">다 음</button>
+
+                    </div>
+
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">4/13</h3>
+                        <h3 class="question">걸어다닐때의 모습은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-4" id="choice-13" value="1" required="required" />
+                            <label for="choice-13">1. 꼿꼿하게 걷지만 걸음걸이가 약간 어색하다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-4" id="choice-14" value="2" required="required" />
+                            <label for="choice-14">2. 느릿느릿 젊잖게 걷는다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-4" id="choice-15" value="3" required="required" />
+                            <label for="choice-15">3. 몸을 꼿꼿이 세우고 빠르게 걷는다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-4" id="choice-16" value="4" required="required" />
+                            <label for="choice-16">4. 얌전하고 자연스럽게 걷는다.</label>
+                        </div>
+
+                    </div>
+
+                    <div class="btn_wrap btn_sort">
+
+                        <button class="prev_btn">이 전</button>
+
+                        <button class="next_btn">다 음</button>
+
+                    </div>
+
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">5/13</h3>
+                        <h3 class="question">자신의 성격은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-5" id="choice-17" value="1" required="required" />
+                            <label for="choice-17">1. 낯선 사람과도 쉽게 어울리며 리더 역할을 많이 한다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-5" id="choice-18" value="2" required="required" />
+                            <label for="choice-18">2. 성격이 태평하고 인내심이 많다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-5" id="choice-19" value="3" required="required" />
+                            <label for="choice-19">3. 성질이 급하고 화를 잘낸다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-5" id="choice-20" value="4" required="required" />
+                            <label for="choice-20">4. 예민하고 꼼꼼하다.</label>
+                        </div>
+                    </div>
+                    <div class="btn_wrap btn_sort">
+                        <button class="prev_btn">이 전</button>
+                        <button class="next_btn">다 음</button>
+                    </div>
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">6/13</h3>
+                        <h3 class="question">일을 추진하는 스타일은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-6" id="choice-21" value="1" required="required" />
+                            <label for="choice-21">1. 어떤 일이든 적극적이고, 결단성 있게 처리하며 끈질기다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-6" id="choice-22" value="2" required="required" />
+                            <label for="choice-22">2. 보수적이지만 결단을 내릴 때는 과감하다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-6" id="choice-23" value="3" required="required" />
+                            <label for="choice-23">3. 매사에 열정적이고, 눈앞에 놓여있는 일을 미루는 법이 없다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-6" id="choice-24" value="4" required="required" />
+                            <label for="choice-24">4. 자기 의견을 겉으로 표현하기 보다 조용히 꼼꼼하게 처리한다.</label>
+                        </div>
+
+                    </div>
+
+                    <div class="btn_wrap btn_sort">
+                        <button class="prev_btn">이 전</button>
+                        <button class="next_btn">다 음</button>
+                    </div>
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">7/13</h3>
+                        <h3 class="question">자신의 성향과 가장 가까운 것은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-7" id="choice-25" value="1" required="required" />
+                            <label for="choice-25">1. 카리스마가 있고, 대중을 이끄는 것을 좋아한다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-7" id="choice-26" value="2" required="required" />
+                            <label for="choice-26">2. 낙천적이며 화를 잘 안낸다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-7" id="choice-27" value="3" required="required" />
+                            <label for="choice-27">3. 정의감이 넘치고, 솔직담백하다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-7" id="choice-28" value="4" required="required" />
+                            <label for="choice-28">4. 생각이 많고, 감수성, 직감이 뛰어나다.</label>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap btn_sort">
+                        <button class="prev_btn">이 전</button>
+                        <button class="next_btn">다 음</button>
+                    </div>
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">8/13</h3>
+                        <h3 class="question">몸이 가장 편안 할 때는 언제인가?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-8" id="choice-29" value="1" required="required" />
+                            <label for="choice-29">1. 소변의 양이 많고 잘 나올 때</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-8" id="choice-30" value="2" required="required" />
+                            <label for="choice-30">2. 땀이 잘 나올 때</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-8" id="choice-31" value="3" required="required" />
+                            <label for="choice-31">3. 대변이 잘 나올 때</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-8" id="choice-32" value="4" required="required" />
+                            <label for="choice-32">4. 소화가 잘 될 때</label>
+                        </div>
+
+                    </div>
+                    <div class="btn_wrap btn_sort">
+                        <button class="prev_btn">이 전</button>
+                        <button class="next_btn">다 음</button>
+                    </div>
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">9/13</h3>
+                        <h3 class="question">다음 중 당신이 느끼는 증상은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-9" id="choice-33" value="1" required="required" />
+                            <label for="choice-33">1. 소변 양이 많고 자주 보면 몸이 가볍다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-9" id="choice-34" value="2" required="required" />
+                            <label for="choice-34">2. 긴장을 하면 심장이 두근거린다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-9" id="choice-35" value="3" required="required" />
+                            <label for="choice-35">3. 몸이 힘들면 코피가 조금씩 난다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-9" id="choice-36" value="4" required="required" />
+                            <label for="choice-36">4. 잘 놀라고 땀이 많이 나면 어지럽다.</label>
+                        </div>
+                    </div>
+                    <div class="btn_wrap btn_sort">
+                        <button class="prev_btn">이 전</button>
+                        <button class="next_btn">다 음</button>
+                    </div>
+
+                </div>
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">10/13</h3>
+                        <h3 class="question">당신의 몸 상태와 가장 가까운 것은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-10" id="choice-37" value="1" required="required" />
+                            <label for="choice-37">1. 가끔 토하는 경향이 있다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-10" id="choice-38" value="2" required="required" />
+                            <label for="choice-38">2. 웬만큼 먹어서는 탈이 나지 않을 정도로 소화를 잘 시킨다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-10" id="choice-39" value="3" required="required" />
+                            <label for="choice-39">3. 소화는 잘 시키는데, 변비가 있다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-10" id="choice-40" value="4" required="required" />
+                            <label for="choice-40">4. 늘 소화불량에 시달리는 편이다.</label>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap btn_sort">
+                        <button class="prev_btn">이 전</button>
+                        <button class="next_btn">다 음</button>
+                    </div>
+
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">11/13</h3>
+                        <h3 class="question">다음 중 당신이 느끼는 증상은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-11" id="choice-41" value="1" required="required" />
+                            <label for="choice-41">1. 다른 증상 없이 다리에 힘이 없고 보행하기가 힘든 적이 있다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-11" id="choice-42" value="2" required="required" />
+                            <label for="choice-42">2. 열이 났다 멈추는 증상이 반복되는 경우가 있다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-11" id="choice-43" value="3" required="required" />
+                            <label for="choice-43">3. 물을 많이 먹고 자면 붓는다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-11" id="choice-44" value="4" required="required" />
+                            <label for="choice-44">4. 설사를 하면서 아랫배가 찬 적이 있다.</label>
+                        </div>
+
+                    </div>
+
+                    <div class="btn_wrap btn_sort">
+                        <button class="prev_btn">이 전</button>
+                        <button class="next_btn">다 음</button>
+                    </div>
+
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">12/13</h3>
+                        <h3 class="question">평상시 식습관은?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-12" id="choice-45" value="1" required="required" />
+                            <label for="choice-45">1. 무엇이든 가리지는 않지만 먹는 양은 많지 않다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-12" id="choice-46" value="2" required="required" />
+                            <label for="choice-46">2. 무엇이든 많이 먹고, 기름진 음식을 좋아한다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-12" id="choice-47" value="3" required="required" />
+                            <label for="choice-47">3. 평소에는 괜찮지만 스트레스를 받으면 폭식을 한다.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-12" id="choice-48" value="4" required="required" />
+                            <label for="choice-48">4. 음식을 가려먹는 편이다.</label>
+                        </div>
+
+                    </div>
+
+                    <div class="btn_wrap btn_sort">
+
+                        <button class="prev_btn">이 전</button>
+
+                        <button class="next_btn">다 음</button>
+
+                    </div>
+
+                </div>
+
+                <div class="test">
+                    <div class="question_container">
+                        <h3 class="number">13/13</h3>
+                        <h3 class="question">다음중 제일 좋아하는 음식 종류는?</h3>
+                    </div>
+
+                    <div class="answer">
+
+                        <div>
+                            <input type="radio" name="question-13" id="choice-49" value="1" required="required" />
+                            <label for="choice-49">1. 시원한 음식, 해물</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-13" id="choice-50" value="2" required="required" />
+                            <label for="choice-50">2. 육식, 따뜻한 음식</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-13" id="choice-51" value="3" required="required" />
+                            <label for="choice-51">3. 채소, 생선류, 찬 음식</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-13" id="choice-52" value="4" required="required" />
+                            <label for="choice-52">4. 뜨겁고 매운음식</label>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap btn_sort">
+                        <button class="prev_btn">이 전</button>
+                        <input type="submit" value="제 출" class="submit_btn" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script type="text/javascript" src="{% static '/js/form.js' %}"></script>
+</body>
+
+</html>

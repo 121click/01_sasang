@@ -1,0 +1,36 @@
+
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
+<div class="container my-3">
+  <section id="main_contents">
+    <div class="wrapper">
+  <form method="post" class="post-form" action="{% url 'member:login' %}">
+    {% csrf_token %}
+    {% include "form_errors.html" %}
+    <div class="form-group">
+      <label for="username">사용자ID</label>
+      <input type="text" class="form-control" name="username" id="username"
+        value="{{ form.username.value | default_if_none:'' }}">
+    </div>
+    <div class="form-group">
+      <label for="password">비밀번호</label>
+      <input type="password" class="form-control" name="password" id="password"
+        value="{{ form.password.value | default_if_none:'' }}">
+    </div>
+    <button type="submit" >로그인</button>
+    <a href="/member/signup">
+      <button type="button" >회원가입</button></a>
+  </form>
+  {% if user.is_authenticated %}
+  <p>
+    <script>alert('로그인 되었습니다.'); location.href = '/sstest/main';</script>
+  </p>
+  {% else %}
+  <p>현재 상태 : Guest</p>
+  {% endif %}
+</div>
+</section>
+</div>
+</body>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://mbit.weniv.co.kr/result/4/ -->
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/result.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reset.css' %}">
+    <script src="{% static '/js/jquery-3.5.1.js' %}"></script>
+    <title>내 몸에 맞는 술 궁합</title>
+</head>
+
+<body>
+    <section id="main_contents" style="display: flex;">
+        <div class="wrapper">
+            <div class="result">
+                <div class="titles">
+
+                    <h1> 전체 유형 확인하기 </h1>
+                    <br>
+                    <h3> 유형을 클릭하면 상세페이지로 넘어갑니다... </h3>
+
+                </div>
+                <div>
+                    <div>
+                        <img src='/static/img/태양.png' width='230pix'>
+                        <a href="/sstest/result1/">
+                            <button>태양인</button>
+                        </a>
+                    </div>
+                    <div>
+                        <img src='/static/img/태음.png' width='230pix'>
+                        <a href="/sstest/result2/">
+                            <button>태음인</button>
+                        </a>
+                    </div>
+                    <div>
+                        <img src='/static/img/소양.png' width='200pix'>
+                        <a href="/sstest/result3/">
+                            <button>소양인</button>
+                        </a>
+                    </div>
+                    <div>
+                        <img src='/static/img/소음.png' width='230pix'>
+                        <a href="/sstest/result4/">
+                            <button>소음인</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://mbit.weniv.co.kr/result/4/ -->
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/result.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/reset.css' %}">
+    <script src="{% static '/js/jquery-3.5.1.js' %}"></script>
+    <title>내 몸에 맞는 술 궁합</title>
+</head>
+
+<body>
+    <section id="main_contents" style="display: flex;">
+        <div class="wrapper">
+            <div class="result">
+                <div class="titles">
+                    <h3>술자리에서 2차, 3차 외치는</h3>
+                    <h1>"태양인(太陽人)"</h1>
+                </div>
+                <div class="result_img">
+                    <img src='/static/img/어피치.png' width='200pix'>
+                </div>
+            </div>
+            <div class="result_explains">
+                <div class="result_explains">
+                    <div class="explain">
+                        <ul>
+                            <li>
+                                태양인은 간이 비교적 약해 술에 대한 해독능력이 약함에도 술을 좋아하는 경우가 많은 편.
+                            </li>
+
+                            <li>
+                                현실 생활에서 만족을 느끼지 못하는 경우가 많아 술을 마시면 주사를 부리기도 하니 주의가 요망됨.
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="explain">
+                        <h3 class="title">당신에게 맞는 술은?</h3>
+                        <h4 class="sub_title">“포도주가 최고 독주는 금물”</h4>
+                        <ul>
+                            <li>
+                                도수가 높은 술을 마시면 몸의 원기가 손상될 수 있으므로 도수가 낮은 술이 좋다.
+                            </li>
+                            <li>
+                                포도주가 가장 좋고 생맥주도 괜찮으나. 소주.양주 등 독한 술을 가능한 한 적게 마시는 게 좋다
+                            </li>
+                            <li>
+                                태양인에게 맞는 한약재인 모과.오가피.솔잎.머루 등을 소주에 담가 약주로 조금씩 마시는 것도 좋다.
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="explain">
+                        <h3 class="title">추천하는 안주!</h3>
+                        <ul class="language_lists">
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/1_태양안주.jpg' alt='조개찜'>
+                                </div>
+                                <h3>조개찜</h3>
+                            </li>
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/2_태양안주.jpg' alt='포도'>
+                                </div>
+                                <h3>포도</h3>
+                            </li>
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/3_태양안주.jpg' alt='해산물 샐러드'>
+                                </div>
+                                <h3>해산물 샐러드</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="explain">
+                        <h3 class="title">숙취해소 음식!</h3>
+                        <ul class="language_lists">
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/4_태양숙취.jpg' alt='모과차'>
+                                </div>
+                                <h3>모과차</h3>
+                            </li>
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/5_태양숙취.jpg' alt='키위주스'>
+                                </div>
+                                <h3>키위주스</h3>
+                            </li>
+                            <li>
+                                <div class="img_wrap">
+                                    <img src='/static/img/6_태양숙취.jpg' alt='메밀죽'>
+                                </div>
+                                <h3>메밀죽</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="explain">
+                        <h3 class="title">내 주변 추천 술집</h3>
+                            {% include "map.html" %}
+                    </div>
+                    <div>
+                    <a href="/sstest/result"><button>전체 유형 확인하기</button></a>
+                    </div><br>
+                    <div>
+                    <a href="/sstest/main/"><button>홈으로</button></a>
+                    </div>
+    </section>
+    <script type="text/javascript" src="{% static '/js/result.js' %}"></script>
+</body>
+
+</html>
